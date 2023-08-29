@@ -1,16 +1,5 @@
-# loginpage_cubit
+This is my first cubit using project. 
+İts control state with flutter cubit. 
+This project also has show and hide password with Statelesswidget.
 
-This is flutter login page with cubit
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Uploading Screen_recording_20230829_152848.gif…]()
