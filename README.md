@@ -1,5 +1,8 @@
-This is my first cubit using project. 
-İts control state with flutter cubit. 
+This is my basic cubit using project. 
+All states control with flutter cubit. 
 This project also has show and hide password with Statelesswidget.
 
-![Uploading Screen_recording_20230829_152848.gif…]()
+<center><img src="https://github.com/yigitbstnci/loginpage_cubit/blob/master/gif/LoginCubit_Record.gif" alt="Flutter Login Page with Cubit" height="600" width="300"> </center>
+
+
+Flutter Login Page with Cubit
