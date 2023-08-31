@@ -21,6 +21,8 @@ class LoginButton extends StatelessWidget {
 }
 
 
+// Auth Status
+
 class AuthenticationStatus extends StatelessWidget {
   const AuthenticationStatus({super.key});
 

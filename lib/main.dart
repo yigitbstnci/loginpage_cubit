@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       routes: {
         '/': (context) => const LoginPage(),
-        '/welcome': (context) => WelcomePage(newUsername: '',),
+        '/welcome': (context) => const WelcomePage(newUsername: '',),
 
       }
 

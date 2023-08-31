@@ -17,6 +17,7 @@ class PasswordTextField extends StatelessWidget {
                     textInputAction: TextInputAction.done,
                     //cursorColor: kSecondryColor,
                     obscureText: visibiltyState,
+                    // İts check changes here
                     onChanged: (newPassword) {
                       context.read<PasswordTextCubit>().updatePasswordText(newPassword);
                     },

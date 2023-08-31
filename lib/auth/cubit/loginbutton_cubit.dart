@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loginpage_cubit/auth/cubit/loginbutton_state.dart';
@@ -10,6 +9,8 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
   AuthenticationCubit() : super(AuthenticationInitial());
 
 
+
+
   void performLogin(context,String newUsername, String newPassword) async {
     if (_validateInputs(newUsername, newPassword)) {
       try {
@@ -17,10 +18,16 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
 
         // Simulate API call or authentication process
         await Future.delayed(const Duration(seconds: 2));
+        // Check if entered username and password match any set in FakeDatabase
+        final  Map<String, String>matchingCredentials = FakeDatabase.userCredentials.firstWhere(
+              (credentials) =>
+              credentials['username'] == newUsername &&
+              credentials['password'] == newPassword,
+          orElse: () => {},// Return empty map if no any matches.
+        );
 
-        // Based on the result of the authentication, emit appropriate state
-        if (newUsername == fakedatabase.username1 &&
-            newPassword == fakedatabase.password1) {
+        // Based on the result of the authentication,
+        if (matchingCredentials.isNotEmpty) {
           emit(AuthenticationSuccess());
 
           Navigator.pushReplacement(
@@ -35,6 +42,7 @@ class AuthenticationCubit extends Cubit<AuthenticationState> {
       }
     }
     }
+    // There is validation message situation
     bool _validateInputs(String newUsername, String newPassword) {
     if (newUsername.isEmpty) {
       emit(AuthenticationValidationFailure('Please enter a username'));
